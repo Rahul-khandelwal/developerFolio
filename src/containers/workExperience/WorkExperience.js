@@ -17,11 +17,15 @@ export default function WorkExperience() {
         <div className="experience-container">
           <h1 className="green-heading">Experience</h1>
           {workExperiences.subtitle && (
-            <p className={isDark ? "section-subtitle dark-mode-text" : "section-subtitle"}>
+            <p
+              className={
+                isDark ? "section-subtitle dark-mode-text" : "section-subtitle"
+              }
+            >
               {workExperiences.subtitle}
             </p>
           )}
-          
+
           <div className="timeline">
             {workExperiences.experience.map((exp, i) => {
               return (
@@ -47,14 +51,23 @@ export default function WorkExperience() {
                   <div className="timeline-content">
                     <div className="timeline-header">
                       <div className="role-and-company">
-                        <h3 className={isDark ? "role-title dark-mode-text" : "role-title"}>
+                        <h3
+                          className={
+                            isDark ? "role-title dark-mode-text" : "role-title"
+                          }
+                        >
                           {exp.role}
                         </h3>
                         <span className="company-name">{exp.company}</span>
                         {exp.skills && exp.skills.length > 0 && (
                           <div className="experience-skills-container">
                             {exp.skills.map((skill, idx) => (
-                              <span key={idx} className={`experience-skill-badge color-${idx % 4}`}>
+                              <span
+                                key={idx}
+                                className={`experience-skill-badge color-${
+                                  idx % 4
+                                }`}
+                              >
                                 {skill}
                               </span>
                             ))}
@@ -64,14 +77,21 @@ export default function WorkExperience() {
                       <span className="role-dates">{exp.date}</span>
                     </div>
 
-                    <p className={isDark ? "role-summary dark-mode-text" : "role-summary"}>
+                    <p
+                      className={
+                        isDark ? "role-summary dark-mode-text" : "role-summary"
+                      }
+                    >
                       {exp.desc}
                     </p>
 
                     {exp.descBullets && exp.descBullets.length > 0 && (
                       <ul className="impact-bullets">
                         {exp.descBullets.map((bullet, idx) => (
-                          <li key={idx} className={isDark ? "dark-mode-text" : ""}>
+                          <li
+                            key={idx}
+                            className={isDark ? "dark-mode-text" : ""}
+                          >
                             {bullet}
                           </li>
                         ))}

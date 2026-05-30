@@ -10,9 +10,9 @@ export default function Reading() {
 
   useEffect(() => {
     fetch("./reading.json")
-      .then((res) => res.json())
-      .then((data) => setReadingData(data))
-      .catch((err) => console.error("Error loading reading list:", err));
+      .then(res => res.json())
+      .then(data => setReadingData(data))
+      .catch(err => console.error("Error loading reading list:", err));
   }, []);
 
   if (!readingData) {
@@ -60,7 +60,11 @@ export default function Reading() {
         <div className="reading-container">
           <h1 className="green-heading">Reading List</h1>
           {readingSection.subtitle && (
-            <p className={isDark ? "section-subtitle dark-mode-text" : "section-subtitle"}>
+            <p
+              className={
+                isDark ? "section-subtitle dark-mode-text" : "section-subtitle"
+              }
+            >
               {readingSection.subtitle}
             </p>
           )}
@@ -72,7 +76,7 @@ export default function Reading() {
               Books
             </h2>
             <div className="reading-list">
-              {readingData.books.map((book) => (
+              {readingData.books.map(book => (
                 <div key={book.id} className="reading-tile">
                   {/* Left: Thumbnail or Book Icon */}
                   <div className="tile-visual">
@@ -81,7 +85,7 @@ export default function Reading() {
                         src={book.cover}
                         alt={book.title}
                         className="book-cover-img"
-                        onError={(e) => {
+                        onError={e => {
                           e.target.onerror = null;
                           e.target.style.display = "none";
                           e.target.parentNode.classList.add("use-icon");
@@ -97,18 +101,28 @@ export default function Reading() {
 
                   {/* Center: Content (Title and Description) */}
                   <div className="tile-content">
-                    <h3 className={isDark ? "tile-title dark-mode-text" : "tile-title"}>
+                    <h3
+                      className={
+                        isDark ? "tile-title dark-mode-text" : "tile-title"
+                      }
+                    >
                       {book.title}
                     </h3>
                     <span className="tile-meta">by {book.author}</span>
-                    <p className={isDark ? "tile-desc dark-mode-text" : "tile-desc"}>
+                    <p
+                      className={
+                        isDark ? "tile-desc dark-mode-text" : "tile-desc"
+                      }
+                    >
                       {book.description}
                     </p>
                   </div>
 
                   {/* Right: Status and Actions */}
                   <div className="tile-actions">
-                    <span className={`status-badge ${book.status.toLowerCase()}`}>
+                    <span
+                      className={`status-badge ${book.status.toLowerCase()}`}
+                    >
                       {book.status}
                     </span>
                     {book.link && (
@@ -134,7 +148,7 @@ export default function Reading() {
               Articles &amp; Papers
             </h2>
             <div className="reading-list">
-              {readingData.articles.map((paper) => (
+              {readingData.articles.map(paper => (
                 <div key={paper.id} className="reading-tile">
                   {/* Left: Document Icon */}
                   <div className="tile-visual use-icon">
@@ -143,18 +157,28 @@ export default function Reading() {
 
                   {/* Center: Content (Title and Description) */}
                   <div className="tile-content">
-                    <h3 className={isDark ? "tile-title dark-mode-text" : "tile-title"}>
+                    <h3
+                      className={
+                        isDark ? "tile-title dark-mode-text" : "tile-title"
+                      }
+                    >
                       {paper.title}
                     </h3>
                     <span className="tile-meta">by {paper.author}</span>
-                    <p className={isDark ? "tile-desc dark-mode-text" : "tile-desc"}>
+                    <p
+                      className={
+                        isDark ? "tile-desc dark-mode-text" : "tile-desc"
+                      }
+                    >
                       {paper.description}
                     </p>
                   </div>
 
                   {/* Right: Status and Actions */}
                   <div className="tile-actions">
-                    <span className={`status-badge ${paper.status.toLowerCase()}`}>
+                    <span
+                      className={`status-badge ${paper.status.toLowerCase()}`}
+                    >
                       {paper.status}
                     </span>
                     {paper.link && (

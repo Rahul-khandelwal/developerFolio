@@ -1,5 +1,11 @@
-import React, { useEffect } from "react";
-import { HashRouter, Switch, Route, Redirect, useLocation } from "react-router-dom";
+import React, {useEffect} from "react";
+import {
+  HashRouter,
+  Switch,
+  Route,
+  Redirect,
+  useLocation
+} from "react-router-dom";
 import Header from "../components/header/Header";
 import Greeting from "./greeting/Greeting";
 import WorkExperience from "./workExperience/WorkExperience";
@@ -12,7 +18,7 @@ import {useLocalStorage} from "../hooks/useLocalStorage";
 import "./Main.scss";
 
 function ScrollToTop() {
-  const { pathname } = useLocation();
+  const {pathname} = useLocation();
 
   useEffect(() => {
     window.scrollTo(0, 0);

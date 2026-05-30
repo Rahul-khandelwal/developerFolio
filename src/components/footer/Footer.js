@@ -8,9 +8,7 @@ export default function Footer() {
     <Fade bottom duration={1000} distance="5px">
       <div className="footer-div">
         <div className="footer-left">
-          <p className="footer-text">
-            Copyright &copy; 2026 Rahul Khandelwal
-          </p>
+          <p className="footer-text">Copyright &copy; 2026 Rahul Khandelwal</p>
         </div>
         <div className="footer-right">
           {socialMediaLinks.github && (

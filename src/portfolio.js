@@ -25,8 +25,7 @@ const greeting = {
   subTitle: emoji(
     "Staff Backend Engineer 🚀 specializing in building resilient distributed systems, high-throughput architectures, microservices, and enterprise products with Java, Kotlin, Go, and Scala."
   ),
-  resumeLink:
-    "", // Set to empty to hide the button
+  resumeLink: "", // Set to empty to hide the button
   displayGreeting: true // Set false to hide this section, defaults to true
 };
 
@@ -143,7 +142,8 @@ const educationInfo = {
 
 const techStack = {
   viewSkillBars: true, //Set it to true to show Proficiency Section
-  subtitle: "Technologies that I have worked with to build many diverse and great products.",
+  subtitle:
+    "Technologies that I have worked with to build many diverse and great products.",
   experience: [
     {
       Stack: "Distributed Systems & Microservices",
@@ -173,7 +173,8 @@ const techStack = {
 
 const workExperiences = {
   display: true, //Set it to true to show workExperiences Section
-  subtitle: "My experience working with great companies and solving different challenges to build diverse and great products.",
+  subtitle:
+    "My experience working with great companies and solving different challenges to build diverse and great products.",
   experience: [
     {
       role: "Staff Backend Engineer",
@@ -186,7 +187,14 @@ const workExperiences = {
         "Designed and implemented a distributed transactional caching layer that reduced database read latency by 60% and solved regional failover issues.",
         "Mentored and guided 15+ senior and junior engineers, establishing architectural best practices for Java/Kotlin enterprise applications."
       ],
-      skills: ["Java", "Kotlin", "Kubernetes", "Microservices", "API Design", "Distributed Systems"]
+      skills: [
+        "Java",
+        "Kotlin",
+        "Kubernetes",
+        "Microservices",
+        "API Design",
+        "Distributed Systems"
+      ]
     },
     {
       role: "Senior Backend Engineer",
@@ -198,7 +206,14 @@ const workExperiences = {
         "Architected an event-driven analytics pipeline using Apache Kafka and Scala, processing 5B+ daily telemetry signals with 99.99% availability.",
         "Refactored legacy JVM application memory footprints, saving over $2M in annual AWS EC2 infrastructure costs through optimized GC policies."
       ],
-      skills: ["Scala", "Apache Kafka", "JVM", "AWS", "Event-Driven", "Performance Tuning"]
+      skills: [
+        "Scala",
+        "Apache Kafka",
+        "JVM",
+        "AWS",
+        "Event-Driven",
+        "Performance Tuning"
+      ]
     },
     {
       role: "Software Engineer",
@@ -210,7 +225,14 @@ const workExperiences = {
         "Implemented secure payment gateway integrations with automated reconciliation processes, eliminating manual tracking errors.",
         "Designed relational database schemas and optimized SQL queries, reducing page load latency by 200ms."
       ],
-      skills: ["Java", "Spring Boot", "RESTful APIs", "SQL", "Database Design", "Payment Integration"]
+      skills: [
+        "Java",
+        "Spring Boot",
+        "RESTful APIs",
+        "SQL",
+        "Database Design",
+        "Payment Integration"
+      ]
     }
   ]
 };
@@ -306,7 +328,7 @@ const achievementSection = {
       image: require("./assets/images/pwaLogo.webp"),
       imageAlt: "PWA Logo",
       footerLink: [
-        { name: "Certification", url: "" },
+        {name: "Certification", url: ""},
         {
           name: "Final Project",
           url: "https://pakistan-olx-1.firebaseapp.com/"
@@ -385,7 +407,7 @@ const resumeSection = {
 const contactInfo = {
   title: emoji("Contact Me ☎️"),
   subtitle:
-    "Discuss a project or just want to say hi? Reach out to me on LinkedIn.",
+    "Discuss a project or just want to say hi? Reach out to me on LinkedIn."
   //number: "+92-0000000000",
   //email_address: "saadpasta70@gmail.com"
 };
@@ -399,13 +421,15 @@ const twitterDetails = {
 
 const readingSection = {
   title: "Reading List",
-  subtitle: "This is an archive of Books, Papers and articles that I have read and currently reading. I hope everyone seeing this list find these gems helpful.",
+  subtitle:
+    "This is an archive of Books, Papers and articles that I have read and currently reading. I hope everyone seeing this list find these gems helpful.",
   display: true
 };
 
 const youtubeSection = {
   display: true,
-  subtitle: "Videos that I have posted on youtube which cover technical deep dives, architectural teardowns, and solving real engineering problems for scalable and robust backend systems.",
+  subtitle:
+    "Videos that I have posted on youtube which cover technical deep dives, architectural teardowns, and solving real engineering problems for scalable and robust backend systems.",
   // If no apiKey is provided, it will use rss2json with the channelId
   channelId: "UCRhcnwnGWS671wg3CUvk-8Q",
   apiKey: "", // Optional Google API key

@@ -49,7 +49,7 @@
   transition: color 0.2s ease, transform 0.2s ease;
   text-decoration: none;
   display: inline-block;
-  
+
   &:hover {
     color: $buttonColor;
     transform: translateY(-1px);
@@ -58,7 +58,7 @@
 
 .dark-mode .footer-social-link {
   color: $subTitleDark;
-  
+
   &:hover {
     color: $buttonColor;
   }
@@ -72,16 +72,16 @@
     padding: 20px 16px;
     gap: 1.2rem;
   }
-  
+
   .footer-left {
     order: 2;
   }
-  
+
   .footer-right {
     order: 1;
     justify-content: center;
   }
-  
+
   .footer-text {
     font-size: 0.75rem;
     line-height: 1.5;

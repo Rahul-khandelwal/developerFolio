@@ -32,7 +32,13 @@ export default function Greeting() {
             <div className="expertise-content">
               <h1 className="green-heading">Core Expertise</h1>
               {techStack.subtitle && (
-                <p className={isDark ? "section-subtitle dark-mode-text" : "section-subtitle"}>
+                <p
+                  className={
+                    isDark
+                      ? "section-subtitle dark-mode-text"
+                      : "section-subtitle"
+                  }
+                >
                   {techStack.subtitle}
                 </p>
               )}
