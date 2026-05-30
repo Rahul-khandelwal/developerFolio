@@ -1,15 +1,89 @@
 @import "../../_globalColor";
 
-.footer-text {
-  text-align: center;
-  color: $subTitle !important;
-}
-
-.dark-mode {
-  color: $textColorDark !important;
-}
-
 .footer-div {
-  margin-top: 2rem;
-  padding-bottom: 1rem;
+  max-width: 900px;
+  margin: 5rem auto 2rem auto;
+  padding: 20px 24px;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.dark-mode .footer-div {
+  border-top-color: #30363d;
+}
+
+.footer-text {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.8rem;
+  color: $subTitle !important;
+  margin: 0;
+}
+
+.dark-mode .footer-text {
+  color: $subTitleDark !important;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+}
+
+.tagline {
+  color: $buttonColor;
+  font-weight: 500;
+}
+
+.footer-right {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+.footer-social-link {
+  color: $subTitle;
+  font-size: 1.1rem;
+  transition: color 0.2s ease, transform 0.2s ease;
+  text-decoration: none;
+  display: inline-block;
+  
+  &:hover {
+    color: $buttonColor;
+    transform: translateY(-1px);
+  }
+}
+
+.dark-mode .footer-social-link {
+  color: $subTitleDark;
+  
+  &:hover {
+    color: $buttonColor;
+  }
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .footer-div {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 16px;
+    gap: 1.2rem;
+  }
+  
+  .footer-left {
+    order: 2;
+  }
+  
+  .footer-right {
+    order: 1;
+    justify-content: center;
+  }
+  
+  .footer-text {
+    font-size: 0.75rem;
+    line-height: 1.5;
+  }
 }

@@ -1,7 +1,14 @@
 @import "../_globalColor";
 
 .dark-mode {
-  background-color: $darkBackground;
-  color: white;
-  transition: "0.1s";
+  background-color: $darkBackground !important;
+  color: $textColorDark !important;
+  min-height: 100vh;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+body {
+  background-color: $lightBackground1;
+  color: $textColor;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }

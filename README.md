@@ -266,6 +266,9 @@ If you can help us with these. Please don't hesitate to open a [pull request](ht
 
 - Add More Sections
 
+## DNS Help
+https://stackoverflow.com/questions/54059217/how-to-fix-domain-does-not-resolve-to-the-github-pages-server-error-in-github
+
 ## Project Maintainers 
 
 <table>

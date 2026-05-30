@@ -1,127 +1,168 @@
 @import "../../_globalColor";
 
-.main {
-  width: 90%;
-  padding: 20px 10px;
-  margin: 0px auto;
-  margin-top: 4rem;
-}
-.greet-main {
-  width: 90%;
-  padding: 20px 10px;
-  margin: 0px auto;
-  margin-top: 2rem;
+.about-me-section {
+  max-width: 900px;
+  margin: 6rem auto 4rem auto;
+  padding: 0 24px;
 }
 
-.greeting-main {
+.about-me-container {
   display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
 }
 
-.subTitle {
-  color: $subTitle !important;
+.green-heading {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: $buttonColor;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  position: relative;
 }
 
-.greeting-main {
+
+.bio-text {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: $textColor;
+  margin-bottom: 2rem;
+}
+
+.bio-text.dark-mode-text {
+  color: $textColorDark;
+}
+
+.social-media-container {
+  margin-top: 1rem;
+}
+
+/* Core Expertise / Skills badge styling */
+.skills-badge-container {
   display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  width: 100%;
+  margin-top: 0.5rem;
 }
 
-.greeting-main > * {
-  flex: 1;
-  margin-bottom: 30px;
-}
-
-.empty-div {
-  margin-bottom: 40px;
-}
-
-.button-greeting-div {
-  display: flex;
-  margin-top: 40px;
-}
-.download-link-button {
-  text-decoration: none;
-}
-
-.greeting-text {
-  font-size: 70px;
-  line-height: 1.1;
-  color: $textColor !important;
-}
-
-.greeting-text-p {
-  font-size: 30px;
-  line-height: 40px;
-}
-
-.greeting-image-div > img {
-  max-width: 100%;
-  height: auto;
-}
-
-.wave-emoji {
-  animation-duration: 1.8s;
-  animation-iteration-count: infinite;
-  animation-name: wave;
+.skill-badge {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 4px;
   display: inline-block;
-  transform-origin: 70% 70%;
+  transition: all 0.2s ease-in-out;
+
+  &.color-0 {
+    color: #1a7f37;
+    background-color: rgba(63, 185, 80, 0.12);
+    border: 1px solid rgba(63, 185, 80, 0.3);
+    &:hover {
+      background-color: #1a7f37;
+      color: #ffffff !important;
+      border-color: #1a7f37;
+      transform: translateY(-1px);
+    }
+  }
+
+  &.color-1 {
+    color: #0969da;
+    background-color: rgba(56, 139, 253, 0.12);
+    border: 1px solid rgba(56, 139, 253, 0.3);
+    &:hover {
+      background-color: #0969da;
+      color: #ffffff !important;
+      border-color: #0969da;
+      transform: translateY(-1px);
+    }
+  }
+
+  &.color-2 {
+    color: #8250df;
+    background-color: rgba(187, 128, 255, 0.12);
+    border: 1px solid rgba(187, 128, 255, 0.3);
+    &:hover {
+      background-color: #8250df;
+      color: #ffffff !important;
+      border-color: #8250df;
+      transform: translateY(-1px);
+    }
+  }
+
+  &.color-3 {
+    color: #bc4c00;
+    background-color: rgba(240, 136, 62, 0.12);
+    border: 1px solid rgba(240, 136, 62, 0.3);
+    &:hover {
+      background-color: #bc4c00;
+      color: #ffffff !important;
+      border-color: #bc4c00;
+      transform: translateY(-1px);
+    }
+  }
 }
 
-@keyframes wave {
-  0% {
-    transform: rotate(0deg);
+.dark-mode .skill-badge {
+  &.color-0 {
+    color: #3fb950;
+    background-color: rgba(63, 185, 80, 0.18);
+    border: 1px solid rgba(63, 185, 80, 0.4);
+    &:hover {
+      background-color: #3fb950;
+      color: #0d1117 !important;
+      border-color: #3fb950;
+    }
   }
-  10% {
-    transform: rotate(-10deg);
+
+  &.color-1 {
+    color: #58a6ff;
+    background-color: rgba(56, 139, 253, 0.18);
+    border: 1px solid rgba(56, 139, 253, 0.4);
+    &:hover {
+      background-color: #58a6ff;
+      color: #0d1117 !important;
+      border-color: #58a6ff;
+    }
   }
-  20% {
-    transform: rotate(12deg);
+
+  &.color-2 {
+    color: #bc8cff;
+    background-color: rgba(187, 128, 255, 0.18);
+    border: 1px solid rgba(187, 128, 255, 0.4);
+    &:hover {
+      background-color: #bc8cff;
+      color: #0d1117 !important;
+      border-color: #bc8cff;
+    }
   }
-  30% {
-    transform: rotate(-10deg);
-  }
-  40% {
-    transform: rotate(9deg);
-  }
-  50% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(0deg);
+
+  &.color-3 {
+    color: #f0883e;
+    background-color: rgba(240, 136, 62, 0.18);
+    border: 1px solid rgba(240, 136, 62, 0.4);
+    &:hover {
+      background-color: #f0883e;
+      color: #0d1117 !important;
+      border-color: #f0883e;
+    }
   }
 }
 
-/* Media Query */
-@media (max-width: 1380px) {
-  .greeting-text {
-    font-size: 50px;
-  }
-  .greeting-text-p {
-    font-size: 20px;
-  }
-}
+/* Responsive breakdowns */
 @media (max-width: 768px) {
-  .button-greeting-div {
-    justify-content: space-around;
+  .about-me-section {
+    margin-top: 4rem;
   }
-  .greeting-text {
-    font-size: 30px;
-    text-align: center;
+  
+  .green-heading {
+    font-size: 1.4rem;
   }
-  .greeting-text-p {
-    font-size: 16px;
-    line-height: normal;
-    text-align: center;
-  }
-  .greeting-main {
-    display: block;
-  }
-  .greeting-image-div {
-    height: 256px;
-  }
-}
-
-@media (max-width: 320px) {
-  .main {
-    width: auto;
+  
+  .bio-text {
+    font-size: 0.95rem;
+    line-height: 1.7;
   }
 }

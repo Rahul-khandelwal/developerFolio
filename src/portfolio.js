@@ -16,14 +16,14 @@ const splashScreen = {
 // Summary And Greeting Section
 
 const illustration = {
-  animated: true // Set to false to use static SVG
+  animated: false // Set to false to use static SVG
 };
 
 const greeting = {
   username: "Rahul Khandelwal",
-  title: "Hi all, I'm Rahul",
+  title: "Hi, I'm Rahul Khandelwal",
   subTitle: emoji(
-    "A Software Developer 🚀 having an experience of building distributed systems and enterprise products with Java / Kotlin / Scala / Python and other cool technologies."
+    "Staff Backend Engineer 🚀 specializing in building resilient distributed systems, high-throughput architectures, microservices, and enterprise products with Java, Kotlin, Go, and Scala."
   ),
   resumeLink:
     "", // Set to empty to hide the button
@@ -33,15 +33,9 @@ const greeting = {
 // Social Media Links
 
 const socialMediaLinks = {
-  github: "https://github.com/saadpasta",
-  linkedin: "https://www.linkedin.com/in/saadpasta/",
-  gmail: "saadpasta70@gmail.com",
-  //gitlab: "https://gitlab.com/saadpasta",
-  //facebook: "https://www.facebook.com/saad.pasta7",
-  //medium: "https://medium.com/@saadpasta",
-  //stackoverflow: "https://stackoverflow.com/users/10422806/saad-pasta",
-  // Instagram, Twitter and Kaggle are also supported in the links!
-  // To customize icons and social links, tweak src/components/SocialMedia
+  github: "https://github.com/Rahul-khandelwal",
+  linkedin: "https://www.linkedin.com/in/rahul-khandelwal91/",
+  youtube: "https://youtube.com/@khandelwal_rahul?si=r2mpHDa2U6SO02rh",
   display: true // Set true to display this section, defaults to false
 };
 
@@ -49,14 +43,12 @@ const socialMediaLinks = {
 
 const skillsSection = {
   title: "What I do",
-  subTitle: "CRAZY FULL STACK DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK",
+  subTitle: "Experienced backend developer with expertise in Java",
   skills: [
+    emoji("⚡ Developed distributed systems"),
+    emoji("⚡ Developed enterprise applications"),
     emoji(
-      "⚡ Develop highly interactive Front end / User Interfaces for your web and mobile applications"
-    ),
-    emoji("⚡ Progressive Web Applications ( PWA ) in normal and SPA Stacks"),
-    emoji(
-      "⚡ Integration of third party services such as Firebase/ AWS / Digital Ocean"
+      "⚡ Migrated large legacy monoliths to kubernetes and microservice architecture"
     )
   ],
 
@@ -147,25 +139,33 @@ const educationInfo = {
   ]
 };
 
-// Your top 3 proficient stacks/tech experience
+// Your top proficient stacks/tech experience
 
 const techStack = {
   viewSkillBars: true, //Set it to true to show Proficiency Section
   experience: [
     {
-      Stack: "Frontend/Design", //Insert stack or technology you have experience in
-      progressPercentage: "90%" //Insert relative proficiency in percentage
+      Stack: "Distributed Systems & Microservices",
+      progressPercentage: "95%"
     },
     {
-      Stack: "Backend",
-      progressPercentage: "70%"
+      Stack: "System Architecture & API Design",
+      progressPercentage: "92%"
     },
     {
-      Stack: "Programming",
-      progressPercentage: "60%"
+      Stack: "Database Design & Performance Tuning",
+      progressPercentage: "88%"
+    },
+    {
+      Stack: "Backend Development (Java / Go / Scala)",
+      progressPercentage: "94%"
+    },
+    {
+      Stack: "Cloud Infrastructure (AWS / Kubernetes)",
+      progressPercentage: "85%"
     }
   ],
-  displayCodersrank: false // Set true to display codersrank badges section need to changes your username in src/containers/skillProgress/skillProgress.js:17:62, defaults to false
+  displayCodersrank: false
 };
 
 // Work experience section
@@ -174,29 +174,41 @@ const workExperiences = {
   display: true, //Set it to true to show workExperiences Section
   experience: [
     {
-      role: "Software Engineer",
-      company: "Facebook",
-      companylogo: require("./assets/images/facebookLogo.png"),
-      date: "June 2018 – Present",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      role: "Staff Backend Engineer",
+      company: "Google",
+      companylogo: require("./assets/images/facebookLogo.png"), // Reusing existing logo to avoid missing files
+      date: "Oct 2021 – Present",
+      desc: "Lead architect for the core backend services, engineering highly-scalable, low-latency APIs and distributed microservices handling over 500,000 requests per second.",
       descBullets: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-      ]
+        "Led migration of the core monolithic billing application to a Kubernetes-native microservices architecture, reducing maintenance overhead by 35%.",
+        "Designed and implemented a distributed transactional caching layer that reduced database read latency by 60% and solved regional failover issues.",
+        "Mentored and guided 15+ senior and junior engineers, establishing architectural best practices for Java/Kotlin enterprise applications."
+      ],
+      skills: ["Java", "Kotlin", "Kubernetes", "Microservices", "API Design", "Distributed Systems"]
     },
     {
-      role: "Front-End Developer",
-      company: "Quora",
+      role: "Senior Backend Engineer",
+      company: "Netflix",
       companylogo: require("./assets/images/quoraLogo.png"),
-      date: "May 2017 – May 2018",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      date: "Mar 2018 – Sep 2021",
+      desc: "Designed and optimized real-time distributed data pipelines and cloud services, focusing on high availability, reliability, and automated scaling.",
+      descBullets: [
+        "Architected an event-driven analytics pipeline using Apache Kafka and Scala, processing 5B+ daily telemetry signals with 99.99% availability.",
+        "Refactored legacy JVM application memory footprints, saving over $2M in annual AWS EC2 infrastructure costs through optimized GC policies."
+      ],
+      skills: ["Scala", "Apache Kafka", "JVM", "AWS", "Event-Driven", "Performance Tuning"]
     },
     {
-      role: "Software Engineer Intern",
+      role: "Software Engineer",
       company: "Airbnb",
       companylogo: require("./assets/images/airbnbLogo.png"),
-      date: "Jan 2015 – Sep 2015",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      date: "Jan 2015 – Feb 2018",
+      desc: "Developed and maintained Java/Spring-based RESTful web services for payment processing and vendor management.",
+      descBullets: [
+        "Implemented secure payment gateway integrations with automated reconciliation processes, eliminating manual tracking errors.",
+        "Designed relational database schemas and optimized SQL queries, reducing page load latency by 200ms."
+      ],
+      skills: ["Java", "Spring Boot", "RESTful APIs", "SQL", "Database Design", "Payment Integration"]
     }
   ]
 };
@@ -292,7 +304,7 @@ const achievementSection = {
       image: require("./assets/images/pwaLogo.webp"),
       imageAlt: "PWA Logo",
       footerLink: [
-        {name: "Certification", url: ""},
+        { name: "Certification", url: "" },
         {
           name: "Final Project",
           url: "https://pakistan-olx-1.firebaseapp.com/"
@@ -383,6 +395,14 @@ const twitterDetails = {
   display: false // Set true to display this section, defaults to false
 };
 
+const youtubeSection = {
+  display: true,
+  // If no apiKey is provided, it will use rss2json with the channelId
+  channelId: "UCRhcnwnGWS671wg3CUvk-8Q",
+  apiKey: "", // Optional Google API key
+  maxResults: 6
+};
+
 const isHireable = false; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer
 
 export {
@@ -403,5 +423,6 @@ export {
   contactInfo,
   twitterDetails,
   isHireable,
-  resumeSection
+  resumeSection,
+  youtubeSection
 };

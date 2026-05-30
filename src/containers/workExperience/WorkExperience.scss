@@ -1,37 +1,336 @@
-.experience-cards-div {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-  gap: 1rem 1rem;
-}
+@import "../../_globalColor";
 
-.experience-heading {
-  font-size: 56px;
-  font-weight: 400;
+.experience-section {
+  max-width: 900px;
+  margin: 4rem auto;
+  padding: 0 24px;
 }
 
 .experience-container {
+  width: 100%;
+}
+
+.green-heading {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: $buttonColor;
+  margin-bottom: 2.5rem;
+}
+
+/* Timeline Layout */
+.timeline {
+  position: relative;
+  padding-left: 50px;
   display: flex;
-  width: 90%;
-  padding: 20px 10px;
-  margin: 0px auto;
-  margin-top: 2rem;
-}
-
-.experience-container > * {
-  flex: 1;
-}
-
-/* Media Query */
-
-@media (max-width: 1380px) {
-  .experience-heading {
-    font-size: 40px;
+  flex-direction: column;
+  gap: 3rem;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    left: 17px;
+    top: 10px;
+    bottom: 10px;
+    width: 2px;
+    background-color: rgba(0, 0, 0, 0.08);
   }
 }
 
+.dark-mode .timeline::before {
+  background-color: #30363d;
+}
+
+.timeline-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Timeline Node */
+.timeline-logo-container {
+  position: absolute;
+  left: -50px;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  z-index: 10;
+}
+
+.timeline-logo-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: $lightBackground2;
+  border: 2px solid $buttonColor;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 0 4px $lightBackground1;
+  transition: transform 0.2s ease;
+}
+
+.dark-mode .timeline-logo-circle {
+  background-color: $darkBackground;
+  box-shadow: 0 0 0 4px $darkBackground;
+}
+
+.timeline-company-logo {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.timeline-company-placeholder {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: $buttonColor;
+}
+
+.timeline-item:hover .timeline-logo-circle {
+  transform: scale(1.1);
+}
+
+/* Timeline Content */
+.timeline-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.8rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.role-and-company {
+  display: flex;
+  flex-direction: column;
+}
+
+.role-title {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0 0 4px 0;
+  color: $textColor;
+}
+
+.role-title.dark-mode-text {
+  color: $textColorDark;
+}
+
+.company-name {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 1.05rem;
+  color: $buttonColor;
+  font-weight: 500;
+}
+
+.experience-skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.experience-skill-badge {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 4px;
+  display: inline-block;
+  transition: all 0.2s ease-in-out;
+
+  &.color-0 {
+    color: #1a7f37;
+    background-color: rgba(63, 185, 80, 0.12);
+    border: 1px solid rgba(63, 185, 80, 0.3);
+    &:hover {
+      background-color: #1a7f37;
+      color: #ffffff !important;
+      border-color: #1a7f37;
+    }
+  }
+
+  &.color-1 {
+    color: #0969da;
+    background-color: rgba(56, 139, 253, 0.12);
+    border: 1px solid rgba(56, 139, 253, 0.3);
+    &:hover {
+      background-color: #0969da;
+      color: #ffffff !important;
+      border-color: #0969da;
+    }
+  }
+
+  &.color-2 {
+    color: #8250df;
+    background-color: rgba(187, 128, 255, 0.12);
+    border: 1px solid rgba(187, 128, 255, 0.3);
+    &:hover {
+      background-color: #8250df;
+      color: #ffffff !important;
+      border-color: #8250df;
+    }
+  }
+
+  &.color-3 {
+    color: #bc4c00;
+    background-color: rgba(240, 136, 62, 0.12);
+    border: 1px solid rgba(240, 136, 62, 0.3);
+    &:hover {
+      background-color: #bc4c00;
+      color: #ffffff !important;
+      border-color: #bc4c00;
+    }
+  }
+}
+
+.dark-mode .experience-skill-badge {
+  &.color-0 {
+    color: #3fb950;
+    background-color: rgba(63, 185, 80, 0.18);
+    border: 1px solid rgba(63, 185, 80, 0.4);
+    &:hover {
+      background-color: #3fb950;
+      color: #0d1117 !important;
+      border-color: #3fb950;
+    }
+  }
+
+  &.color-1 {
+    color: #58a6ff;
+    background-color: rgba(56, 139, 253, 0.18);
+    border: 1px solid rgba(56, 139, 253, 0.4);
+    &:hover {
+      background-color: #58a6ff;
+      color: #0d1117 !important;
+      border-color: #58a6ff;
+    }
+  }
+
+  &.color-2 {
+    color: #bc8cff;
+    background-color: rgba(187, 128, 255, 0.18);
+    border: 1px solid rgba(187, 128, 255, 0.4);
+    &:hover {
+      background-color: #bc8cff;
+      color: #0d1117 !important;
+      border-color: #bc8cff;
+    }
+  }
+
+  &.color-3 {
+    color: #f0883e;
+    background-color: rgba(240, 136, 62, 0.18);
+    border: 1px solid rgba(240, 136, 62, 0.4);
+    &:hover {
+      background-color: #f0883e;
+      color: #0d1117 !important;
+      border-color: #f0883e;
+    }
+  }
+}
+
+.role-dates {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.85rem;
+  color: #8b949e;
+  font-weight: 400;
+  margin-top: 4px;
+}
+
+.role-summary {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: $textColor;
+  margin: 0 0 1rem 0;
+}
+
+.role-summary.dark-mode-text {
+  color: $textColorDark;
+}
+
+.impact-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  
+  li {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: $subTitle;
+    position: relative;
+    padding-left: 20px;
+    
+    &::before {
+      content: "-";
+      position: absolute;
+      left: 0;
+      color: $buttonColor;
+      font-weight: 700;
+    }
+  }
+}
+
+.impact-bullets li.dark-mode-text {
+  color: $subTitleDark;
+}
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
-  .experience-heading {
-    font-size: 30px;
-    text-align: center;
+  .timeline {
+    padding-left: 40px;
+    gap: 2.5rem;
+    
+    &::before {
+      left: 12px;
+    }
+  }
+  
+  .timeline-logo-container {
+    left: -40px;
+    width: 26px;
+    height: 26px;
+  }
+  
+  .timeline-logo-circle {
+    width: 24px;
+    height: 24px;
+    box-shadow: 0 0 0 3px $lightBackground1;
+  }
+  
+  .dark-mode .timeline-logo-circle {
+    box-shadow: 0 0 0 3px $darkBackground;
+  }
+  
+  .timeline-company-logo {
+    width: 14px;
+    height: 14px;
+  }
+  
+  .role-title {
+    font-size: 1rem;
+  }
+  
+  .role-summary {
+    font-size: 0.9rem;
+  }
+  
+  .impact-bullets li {
+    font-size: 0.85rem;
   }
 }

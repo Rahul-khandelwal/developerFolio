@@ -1,0 +1,57 @@
+{
+  "books": [
+    {
+      "id": "book-1",
+      "title": "Designing Data-Intensive Applications",
+      "author": "Martin Kleppmann",
+      "description": "An excellent guide to the principles, architecture, and trade-offs of modern data systems. Covers storage engines, replication, partitioning, transactions, and distributed consensus.",
+      "status": "Completed",
+      "cover": "https://covers.openlibrary.org/b/isbn/9781491903063-M.jpg",
+      "link": "https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/"
+    },
+    {
+      "id": "book-2",
+      "title": "Clean Architecture",
+      "author": "Robert C. Martin",
+      "description": "A handbook of software structure and design, presenting the universal rules of software architecture and explaining how to build robust, maintainable systems.",
+      "status": "Completed",
+      "cover": "https://covers.openlibrary.org/b/isbn/9780134494166-M.jpg",
+      "link": "https://www.oreilly.com/library/view/clean-architecture-a/9780134494272/"
+    },
+    {
+      "id": "book-3",
+      "title": "Site Reliability Engineering",
+      "author": "Betsy Beyer, Chris Jones, Jennifer Petoff, Niall Richard Murphy",
+      "description": "How Google runs production systems. Explains the engineering and O&M practices that enable Google to build, deploy, monitor, and maintain some of the largest software systems in the world.",
+      "status": "Active",
+      "cover": "https://covers.openlibrary.org/b/isbn/9781491929124-M.jpg",
+      "link": "https://sre.google/sre-book/table-of-contents/"
+    }
+  ],
+  "articles": [
+    {
+      "id": "paper-1",
+      "title": "MapReduce: Simplified Data Processing on Large Clusters",
+      "author": "Jeffrey Dean and Sanjay Ghemawat (Google)",
+      "description": "The seminal paper describing a programming model and an associated implementation for processing and generating large data sets on distributed clusters.",
+      "status": "Completed",
+      "link": "https://static.googleusercontent.com/media/research.google.com/en//archive/mapreduce-osdi04.pdf"
+    },
+    {
+      "id": "paper-2",
+      "title": "Dynamo: Amazon's Highly Available Key-value Store",
+      "author": "Giuseppe DeCandia et al. (Amazon)",
+      "description": "Introduced the design of Dynamo, a highly available and scalable key-value storage system that powers many of Amazon's core services, popularizing decentralized databases.",
+      "status": "Completed",
+      "link": "https://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf"
+    },
+    {
+      "id": "paper-3",
+      "title": "In Search of an Understandable Consensus Algorithm (Raft)",
+      "author": "Diego Ongaro and John Ousterhout (Stanford)",
+      "description": "Introduced the Raft consensus algorithm, designed as an alternative to Paxos to be easier to understand, implement, and reason about in distributed systems.",
+      "status": "Completed",
+      "link": "https://raft.github.io/raft.pdf"
+    }
+  ]
+}
