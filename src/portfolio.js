@@ -23,7 +23,7 @@ const greeting = {
   username: "Rahul Khandelwal",
   title: "Hi, I'm Rahul Khandelwal",
   subTitle: emoji(
-    "Staff Backend Engineer 🚀 specializing in building resilient distributed systems, high-throughput architectures, microservices, and enterprise products with Java, Kotlin, Go, and Scala."
+    "Senior Member of Technical Staff with 13+ years of experience designing and developing large scale distributed systems/applications. I am currently working with Nutanix building the next generation of Nutanix Database Service and mentoring new talent. I have extensive experience in resolving complex software problems, building Scalable Control Planes, Kubernetes architectures, and Distributed Systems with Java, Go, and Spring Boot. I have previously worked with Salesforce for Net Zero Cloud, ThoughtWorks for high-throughput lending/banking engines, and big data analytics/database engines at Intellicus and Cumulus-Systems."
   ),
   resumeLink: "", // Set to empty to hide the button
   displayGreeting: true // Set false to hide this section, defaults to true
@@ -143,26 +143,30 @@ const educationInfo = {
 const techStack = {
   viewSkillBars: true, //Set it to true to show Proficiency Section
   subtitle:
-    "Technologies that I have worked with to build many diverse and great products.",
+    "Skils that I have aquired while building many diverse and great products.",
   experience: [
+    {
+      Stack: "Backend Development (Java / Kotlin / Go / Scala)",
+      progressPercentage: "94%"
+    },
+    {
+      Stack: "Rest API Development (Spring Boot / Java EE)",
+      progressPercentage: "94%"
+    },
     {
       Stack: "Distributed Systems & Microservices",
       progressPercentage: "95%"
     },
     {
-      Stack: "System Architecture & API Design",
+      Stack: "System Design & API Design",
       progressPercentage: "92%"
     },
     {
-      Stack: "Database Design & Performance Tuning",
+      Stack: "Database Design",
       progressPercentage: "88%"
     },
     {
-      Stack: "Backend Development (Java / Go / Scala)",
-      progressPercentage: "94%"
-    },
-    {
-      Stack: "Cloud Infrastructure (AWS / Kubernetes)",
+      Stack: "Containerized Deployments (Docker / Kubernetes)",
       progressPercentage: "85%"
     }
   ],
@@ -177,61 +181,174 @@ const workExperiences = {
     "My experience working with great companies and solving different challenges to build diverse and great products.",
   experience: [
     {
-      role: "Staff Backend Engineer",
-      company: "Google",
-      companylogo: require("./assets/images/facebookLogo.png"), // Reusing existing logo to avoid missing files
-      date: "Oct 2021 – Present",
-      desc: "Lead architect for the core backend services, engineering highly-scalable, low-latency APIs and distributed microservices handling over 500,000 requests per second.",
-      descBullets: [
-        "Led migration of the core monolithic billing application to a Kubernetes-native microservices architecture, reducing maintenance overhead by 35%.",
-        "Designed and implemented a distributed transactional caching layer that reduced database read latency by 60% and solved regional failover issues.",
-        "Mentored and guided 15+ senior and junior engineers, establishing architectural best practices for Java/Kotlin enterprise applications."
+      role: "Senior Member of Technical Staff",
+      company: "Nutanix",
+      companylogo: require("./assets/images/nutanixLogo.jpg"),
+      date: "Jun 2022 – Present",
+      projects: [
+        {
+          name: "Nutanix Database Service (NDB)",
+          desc: "Leading the re-architecture of NDB (formerly ERA) which is a Nutanix exterprise offering to provides backup/restore, provision, point in time restore and patching capabilities for different databases across on-prem/cloud deployments.",
+          descBullets: [
+            "Desigining next generation of NDB Control Plane by containerizing the CP deployment, Integrating with other Nutanix products such as SMSP, PC Marketplace, LCM, NDK for extended capabilities and consistent customer experience.",
+            "Leading the effort to scale NDB CP for >3000 databases as part of the next generation of NDB Control Plane.",
+            "Responsible for - Architecture and design, milestone and release planning, east-west communication for dependencies and deliverables, communication within and across teams for design reviews and deliverables, implementations, developer re-education and productivity etc.",
+            "Led the effort to scale first generation of NDB CP to >1000 databases as part of the upgrade team.",
+            "Identified bottlenecks, designed and implemented improvements (such as rate limiting) in the upgrade workflow to support upgrade of >1000 of DBs concurrently with reliability and predictability.",
+            "Improved developer productivity for the product by introducing and intrgrating Spotbugs (static code analysis), UTs/ITs for java code which has added to performance optimization and stability of the product. Educated team on unit testing and integrated unit testing in build process.",
+            "Contributed to the NDB cloud public preview by Delivering the Postgres DB snapshot (backup and PITR) support."
+          ]
+        }
       ],
       skills: [
-        "Java",
-        "Kotlin",
+        "Java 21",
+        "Java EE",
+        "Spring Boot",
         "Kubernetes",
+        "System Design",
         "Microservices",
-        "API Design",
-        "Distributed Systems"
+        "Distributed Systems",
+        "Python",
+        "GOLang",
+        "Shell Scripting"
       ]
     },
     {
-      role: "Senior Backend Engineer",
-      company: "Netflix",
-      companylogo: require("./assets/images/quoraLogo.png"),
-      date: "Mar 2018 – Sep 2021",
-      desc: "Designed and optimized real-time distributed data pipelines and cloud services, focusing on high availability, reliability, and automated scaling.",
-      descBullets: [
-        "Architected an event-driven analytics pipeline using Apache Kafka and Scala, processing 5B+ daily telemetry signals with 99.99% availability.",
-        "Refactored legacy JVM application memory footprints, saving over $2M in annual AWS EC2 infrastructure costs through optimized GC policies."
+      role: "Senior Member of Technical Staff",
+      company: "Salesforce",
+      companylogo: require("./assets/images/salesforceLogo.png"),
+      date: "Sep 2021 – May 2022",
+      projects: [
+        {
+          name: "Net Zero Cloud",
+          desc: "Senior developer for the product which is aimed to help customers track their carbon footprint and help them make informed decisions towards reducing their carbon emission.",
+          descBullets: [
+            "Added support for Data Gap Filling capabilities which used automated and manual methods to identify gaps in energy use records and help customer fill those gaps.",
+            "Helping in onboarding of new folks joining Net Zero Cloud and Industries cloud."
+          ]
+        }
+      ],
+      skills: [
+        "Java 11",
+        "Spring Boot",
+        "Javascript",
+        "Salesforce Core Platform"
+      ]
+    },
+    {
+      role: "Senior Application Developer",
+      company: "ThoughtWorks",
+      companylogo: require("./assets/images/thoughtworks_logo.jpg"),
+      date: "Jul 2019 – Sep 2021",
+      projects: [
+        {
+          name: "Maximus",
+          desc: "Lead developer for the scalable and extendible platform for all of the lending products of Axis Bank.",
+          descBullets: [
+            "Added support for E-KYC, E-NACH and Income Assessment capabilities which helped Axis Bank to disburse more than 150000 personal loan applications over the last year to existing to bank and new to bank customers.",
+            "Helped increasing Axis Bank Lending revenue from 5.9 MN to 8.8 MN USDs in year 2020 by improving personal loan lending capabilities with E-KYC, E-NACH and Income Assessment.",
+            "Accomplished complete support for new to bank customers on lending platform by developing Video-KYC capability.",
+            "Accomplished integration and release of Auto Loan Top Up product as Feature owner in less than 3 months from inception.",
+            "Accomplished onboarding of a new team of graduates in less than 2 months as Tech Lead for them."
+          ]
+        },
+        {
+          name: "Axis Digital",
+          desc: "Platform to provide easy saving account opening for salaried customers.",
+          descBullets: [
+            "Enabled faster inception by doing rapid POCs for E-KYC, Video-KYC, etc."
+          ]
+        },
+        {
+          name: "Thanos",
+          desc: "Axis Bank Marketplace to sell partners services e.g., mutual funds, insurance etc.",
+          descBullets: [
+            "Enabled faster inception and onboarding by doing rapid POCs for partner integration."
+          ]
+        }
+      ],
+      skills: [
+        "Kotlin",
+        "Spring Boot",
+        "Mongo DB",
+        "Apache Kafka",
+        "Kubernetes",
+        "Docker",
+        "React",
+        "Microservices",
+        "Distributed Systems",
+        "API Design"
+      ]
+    },
+    {
+      role: "Senior Software Engineer",
+      company: "Intellicus Technologies",
+      companylogo: require("./assets/images/intellicusLogo.png"),
+      date: "June 2017 – June 2019",
+      projects: [
+        {
+          name: "Kyvos Insights",
+          desc: "Kyvos Insights (http://www.kyvosinsights.com) is a product that provides blazing fast business intelligence on big data and Hadoop.",
+          descBullets: [
+            "Designed and implemented the SQL Parser and Engine for Kyvos which enabled integration with PowerBI, MicroStrategy and Qlik.",
+            "Implemented SQL engine capabilities from statement parsing to serving result over proprietary Multidimensional OLAP cube data structures.",
+            "It enabled product to gain customers like Adobe."
+          ]
+        }
       ],
       skills: [
         "Scala",
-        "Apache Kafka",
-        "JVM",
-        "AWS",
-        "Event-Driven",
+        "Java",
+        "Spark SQL",
+        "HDFS",
+        "MOLAP",
         "Performance Tuning"
       ]
     },
     {
-      role: "Software Engineer",
-      company: "Airbnb",
-      companylogo: require("./assets/images/airbnbLogo.png"),
-      date: "Jan 2015 – Feb 2018",
-      desc: "Developed and maintained Java/Spring-based RESTful web services for payment processing and vendor management.",
-      descBullets: [
-        "Implemented secure payment gateway integrations with automated reconciliation processes, eliminating manual tracking errors.",
-        "Designed relational database schemas and optimized SQL queries, reducing page load latency by 200ms."
+      role: "Senior Software Engineer",
+      company: "Cumulus Systems",
+      companylogo: require("./assets/images/cumulus_logo.jpeg"),
+      date: "Mar 2013 – May 2017",
+      projects: [
+        {
+          name: "MARS For Logs",
+          desc: "A new concept product to check prodoct market fit for providing Log Analysis capabilities.",
+          descBullets: [
+            "I Designed and implemented initial version of \"MARS for logs\" ensuring scalability, robustness & high performance which enabled faster time to market.",
+            "Enabled faster time to market by doing POCs around parsing, analysing and storing different types of log messages.",
+            "This project has further evolved into Bolt Analytics(https://boltanalytics.com)"
+          ]
+        },
+        {
+          name: "MARS",
+          desc: "Flagship product which provides high-performance and scalable analytics engine over massive data. http://www.cumulus-systems.com/mars.",
+          descBullets: [
+            "Developed and maintained scalable and high-performance MARS TSDB (and its REST APIs) which is the USP of the product as part of as part of the database development team.",
+            "MARS TSDB is a specialized, patented(US9081834) database to store Timeseries data.",
+            "Developed active directory support for MARS which enabled large scale customers to take the advantage of MARS reporting engine.",
+            "Integrated Eclipse BIRT reporting tool with MARS; Developed real time alerts and advance search for MARS."
+          ]
+        },
+        {
+          name: "TMEA Analyzer and I-SEC",
+          desc: "Developed and maintained TMEA Analyzer and I-SEC which are part of Hitachi’s Performance Analytics software package.",
+          descBullets: [
+            "Designed and Implemented multiple new features in TMEA Analyzer.",
+            "Designed and Implemeneted a common UI dashboard I-SEC and integrated it with TMEA and MARS to leverage ad-hoc reporting capabilities.",
+            "I-SEC was implemeneted on tight deadlines to unblock multiple customer onboardings of more than 2 MN USDs."
+          ]
+        }
       ],
       skills: [
         "Java",
-        "Spring Boot",
+        "Java EE",
+        "Apache Click",
+        "Apache Solr",
         "RESTful APIs",
-        "SQL",
-        "Database Design",
-        "Payment Integration"
+        "Apache Kafka",
+        "SQL Server",
+        "Database Design"
       ]
     }
   ]
@@ -328,7 +445,7 @@ const achievementSection = {
       image: require("./assets/images/pwaLogo.webp"),
       imageAlt: "PWA Logo",
       footerLink: [
-        {name: "Certification", url: ""},
+        { name: "Certification", url: "" },
         {
           name: "Final Project",
           url: "https://pakistan-olx-1.firebaseapp.com/"
@@ -420,7 +537,7 @@ const twitterDetails = {
 };
 
 const readingSection = {
-  title: "Reading List",
+  title: "Reading",
   subtitle:
     "This is an archive of Books, Papers and articles that I have read and currently reading. I hope everyone seeing this list find these gems helpful.",
   display: true

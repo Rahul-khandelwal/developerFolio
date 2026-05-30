@@ -42,7 +42,7 @@ A high-fidelity, professional portfolio for a Staff Backend Engineer with 13+ ye
 - **Content**: Company, role, dates, and bulleted impact statements.
 - **Styling**: Green headings for section titles.
 
-### C. Reading List
+### C. Reading
 - **Organization**: Two vertical sections: "Books" and "Articles & Papers".
 - **Structure**: Single-column horizontal tiles.
   - Left: Book thumbnail or Document icon.

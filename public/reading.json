@@ -5,8 +5,8 @@
       "title": "Designing Data-Intensive Applications",
       "author": "Martin Kleppmann",
       "description": "An excellent guide to the principles, architecture, and trade-offs of modern data systems. Covers storage engines, replication, partitioning, transactions, and distributed consensus.",
-      "status": "Completed",
-      "cover": "https://covers.openlibrary.org/b/isbn/9781491903063-M.jpg",
+      "status": "Currently Reading",
+      "cover": "https://covers.openlibrary.org/b/isbn/9781449373320-M.jpg",
       "link": "https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/"
     },
     {
@@ -14,44 +14,78 @@
       "title": "Clean Architecture",
       "author": "Robert C. Martin",
       "description": "A handbook of software structure and design, presenting the universal rules of software architecture and explaining how to build robust, maintainable systems.",
-      "status": "Completed",
+      "status": "Plan to Read",
       "cover": "https://covers.openlibrary.org/b/isbn/9780134494166-M.jpg",
       "link": "https://www.oreilly.com/library/view/clean-architecture-a/9780134494272/"
     },
     {
       "id": "book-3",
-      "title": "Site Reliability Engineering",
-      "author": "Betsy Beyer, Chris Jones, Jennifer Petoff, Niall Richard Murphy",
-      "description": "How Google runs production systems. Explains the engineering and O&M practices that enable Google to build, deploy, monitor, and maintain some of the largest software systems in the world.",
-      "status": "Active",
-      "cover": "https://covers.openlibrary.org/b/isbn/9781491929124-M.jpg",
-      "link": "https://sre.google/sre-book/table-of-contents/"
+      "title": "The Art of Scalability",
+      "author": "Martin L. Abbott and Michael T. Fisher",
+      "description": "A comprehensive guide to scaling architectures, organizations, and processes. Explains models like the AKF Scale Cube to design high-availability and high-volume systems.",
+      "status": "Plan to Read",
+      "cover": "https://covers.openlibrary.org/b/isbn/9780134032801-M.jpg",
+      "link": "https://www.oreilly.com/library/view/the-art-of/9780134031385/"
+    },
+    {
+      "id": "book-4",
+      "title": "Effective Java (3rd Edition)",
+      "author": "Joshua Bloch",
+      "description": "The definitive guide to Java platform best practices. Covers modern language features, design patterns, and programming techniques to write clear, correct, and robust Java code.",
+      "status": "Plan to Read",
+      "cover": "https://covers.openlibrary.org/b/isbn/9780134685991-M.jpg",
+      "link": "https://www.oreilly.com/library/view/effective-java/9780134686097/"
+    },
+    {
+      "id": "book-5",
+      "title": "The Algorithm Design Manual",
+      "author": "Steven S. Skiena",
+      "description": "An excellent guide to algorithm design and analysis. Features a catalog of algorithmic resources and real-world design war stories.",
+      "status": "Plan to Read",
+      "cover": "https://covers.openlibrary.org/b/isbn/9783030542580-M.jpg",
+      "link": "https://www.algorist.com/"
     }
   ],
   "articles": [
     {
       "id": "paper-1",
-      "title": "MapReduce: Simplified Data Processing on Large Clusters",
-      "author": "Jeffrey Dean and Sanjay Ghemawat (Google)",
-      "description": "The seminal paper describing a programming model and an associated implementation for processing and generating large data sets on distributed clusters.",
+      "title": "Zanzibar: Google's Consistent, Global Authorization System",
+      "author": "Ruofei Fan et al. (Google)",
+      "description": "Google's global authorization system that stores and evaluates ACLs. It manages hundreds of billions of relation tuples and processes millions of authorization requests per second with low latency.",
       "status": "Completed",
-      "link": "https://static.googleusercontent.com/media/research.google.com/en//archive/mapreduce-osdi04.pdf"
+      "link": "https://research.google/pubs/zanzibar-googles-consistent-global-authorization-system/"
     },
     {
       "id": "paper-2",
-      "title": "Dynamo: Amazon's Highly Available Key-value Store",
-      "author": "Giuseppe DeCandia et al. (Amazon)",
-      "description": "Introduced the design of Dynamo, a highly available and scalable key-value storage system that powers many of Amazon's core services, popularizing decentralized databases.",
-      "status": "Completed",
-      "link": "https://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf"
+      "title": "MapReduce: Simplified Data Processing on Large Clusters",
+      "author": "Jeffrey Dean and Sanjay Ghemawat (Google)",
+      "description": "The seminal paper describing a programming model and an associated implementation for processing and generating large data sets on distributed clusters.",
+      "status": "Plan to Read",
+      "link": "https://static.googleusercontent.com/media/research.google.com/en//archive/mapreduce-osdi04.pdf"
     },
     {
       "id": "paper-3",
+      "title": "Dynamo: Amazon's Highly Available Key-value Store",
+      "author": "Giuseppe DeCandia et al. (Amazon)",
+      "description": "Introduced the design of Dynamo, a highly available and scalable key-value storage system that powers many of Amazon's core services, popularizing decentralized databases.",
+      "status": "Plan to Read",
+      "link": "https://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf"
+    },
+    {
+      "id": "paper-4",
       "title": "In Search of an Understandable Consensus Algorithm (Raft)",
       "author": "Diego Ongaro and John Ousterhout (Stanford)",
       "description": "Introduced the Raft consensus algorithm, designed as an alternative to Paxos to be easier to understand, implement, and reason about in distributed systems.",
-      "status": "Completed",
+      "status": "Plan to Read",
       "link": "https://raft.github.io/raft.pdf"
+    },
+    {
+      "id": "paper-5",
+      "title": "The Google File System",
+      "author": "Sanjay Ghemawat, Howard Gobioff, and Fay Chang (Google)",
+      "description": "Introduced GFS, a scalable distributed file system for large distributed data-intensive applications. It provides fault tolerance while running on inexpensive commodity hardware.",
+      "status": "Plan to Read",
+      "link": "https://static.googleusercontent.com/media/research.google.com/en//archive/gfs-sosp03.pdf"
     }
   ]
 }

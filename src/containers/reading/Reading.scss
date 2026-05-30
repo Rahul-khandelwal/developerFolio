@@ -40,6 +40,36 @@
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
+
+  &.scrollable-list {
+    max-height: 440px;
+    overflow-y: auto;
+    padding-right: 8px;
+
+    /* Custom Webkit scrollbar */
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: rgba(0, 0, 0, 0.15);
+      border-radius: 3px;
+    }
+    &:hover::-webkit-scrollbar-thumb {
+      background: rgba(0, 0, 0, 0.3);
+    }
+  }
+}
+
+.dark-mode .reading-list.scrollable-list {
+  &::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.12);
+  }
+  &:hover::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.25);
+  }
 }
 
 /* Horizontal Tile (3-Zone Layout) */
@@ -188,11 +218,23 @@
     border-color: rgba(63, 185, 80, 0.2);
   }
 
-  &.active {
+  &.currently-reading {
     background-color: rgba(227, 179, 65, 0.1);
     color: #e3b341;
     border-color: rgba(227, 179, 65, 0.2);
   }
+
+  &.plan-to-read {
+    background-color: rgba(9, 105, 218, 0.1);
+    color: #0969da;
+    border-color: rgba(9, 105, 218, 0.2);
+  }
+}
+
+.dark-mode .status-badge.plan-to-read {
+  background-color: rgba(56, 139, 253, 0.15);
+  color: #58a6ff;
+  border-color: rgba(56, 139, 253, 0.3);
 }
 
 .tile-action-btn {

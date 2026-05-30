@@ -1,11 +1,11 @@
-import React, {useState, useEffect, useContext} from "react";
-import {Fade} from "react-reveal";
+import React, { useState, useEffect, useContext } from "react";
+import { Fade } from "react-reveal";
 import "./Reading.scss";
 import StyleContext from "../../contexts/StyleContext";
-import {readingSection} from "../../portfolio";
+import { readingSection } from "../../portfolio";
 
 export default function Reading() {
-  const {isDark} = useContext(StyleContext);
+  const { isDark } = useContext(StyleContext);
   const [readingData, setReadingData] = useState(null);
 
   useEffect(() => {
@@ -58,7 +58,7 @@ export default function Reading() {
     <div className="reading-section" id="reading">
       <Fade bottom duration={1000} distance="40px">
         <div className="reading-container">
-          <h1 className="green-heading">Reading List</h1>
+          <h1 className="green-heading">Reading</h1>
           {readingSection.subtitle && (
             <p
               className={
@@ -72,10 +72,10 @@ export default function Reading() {
           {/* Books Section */}
           <div className="reading-subset">
             <h2 className="subset-title">
-              <i className="fas fa-book" style={{marginRight: "10px"}}></i>
+              <i className="fas fa-book" style={{ marginRight: "10px" }}></i>
               Books
             </h2>
-            <div className="reading-list">
+            <div className="reading-list scrollable-list">
               {readingData.books.map(book => (
                 <div key={book.id} className="reading-tile">
                   {/* Left: Thumbnail or Book Icon */}
@@ -121,7 +121,7 @@ export default function Reading() {
                   {/* Right: Status and Actions */}
                   <div className="tile-actions">
                     <span
-                      className={`status-badge ${book.status.toLowerCase()}`}
+                      className={`status-badge ${book.status.toLowerCase().replace(/\s+/g, "-")}`}
                     >
                       {book.status}
                     </span>
@@ -144,10 +144,10 @@ export default function Reading() {
           {/* Articles & Papers Section */}
           <div className="reading-subset">
             <h2 className="subset-title">
-              <i className="fas fa-file-alt" style={{marginRight: "10px"}}></i>
+              <i className="fas fa-file-alt" style={{ marginRight: "10px" }}></i>
               Articles &amp; Papers
             </h2>
-            <div className="reading-list">
+            <div className="reading-list scrollable-list">
               {readingData.articles.map(paper => (
                 <div key={paper.id} className="reading-tile">
                   {/* Left: Document Icon */}
@@ -177,7 +177,7 @@ export default function Reading() {
                   {/* Right: Status and Actions */}
                   <div className="tile-actions">
                     <span
-                      className={`status-badge ${paper.status.toLowerCase()}`}
+                      className={`status-badge ${paper.status.toLowerCase().replace(/\s+/g, "-")}`}
                     >
                       {paper.status}
                     </span>

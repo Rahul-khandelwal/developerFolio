@@ -66,18 +66,26 @@ export default function ExperienceCard({cardInfo, isDark}) {
         >
           {cardInfo.date}
         </h5>
-        <p
-          className={
-            isDark
-              ? "subTitle experience-text-desc dark-mode-text"
-              : "subTitle experience-text-desc"
-          }
-        >
-          {cardInfo.desc}
-        </p>
-        <ul>
-          <GetDescBullets descBullets={cardInfo.descBullets} isDark={isDark} />
-        </ul>
+        {cardInfo.projects && cardInfo.projects.map((project, index) => (
+          <div key={index} style={{ marginTop: "1.5rem", textAlign: "left" }}>
+            <p
+              className={
+                isDark
+                  ? "subTitle experience-text-desc dark-mode-text"
+                  : "subTitle experience-text-desc"
+              }
+              style={{ textAlign: "left" }}
+            >
+              <strong style={{ fontWeight: "bold" }}>{project.name}: </strong>
+              {project.desc}
+            </p>
+            {project.descBullets && (
+              <ul>
+                <GetDescBullets descBullets={project.descBullets} isDark={isDark} />
+              </ul>
+            )}
+          </div>
+        ))}
       </div>
     </div>
   );
