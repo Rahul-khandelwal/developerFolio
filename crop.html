@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cropping Profile Photo...</title>
+</head>
+<body>
+  <h2>Cropping image to circle...</h2>
+  <canvas id="canvas" style="display:none;"></canvas>
+  <script>
+    const img = new Image();
+    img.src = 'profile_photo.jpg';
+    img.onload = function() {
+      const canvas = document.getElementById('canvas');
+      const ctx = canvas.getContext('2d');
+      
+      // Set target size for the favicon (128x128 is perfect for crisp tab icons)
+      const targetSize = 128;
+      canvas.width = targetSize;
+      canvas.height = targetSize;
+      
+      // Draw circular clip path
+      ctx.beginPath();
+      ctx.arc(targetSize / 2, targetSize / 2, targetSize / 2, 0, Math.PI * 2);
+      ctx.clip();
+      
+      // Draw image centered and scaled down
+      const sourceSize = Math.min(img.width, img.height);
+      const sourceX = (img.width - sourceSize) / 2;
+      const sourceY = (img.height - sourceSize) / 2;
+      ctx.drawImage(img, sourceX, sourceY, sourceSize, sourceSize, 0, 0, targetSize, targetSize);
+      
+      // Convert to png and trigger download
+      const link = document.createElement('a');
+      link.download = 'profile_photo.png';
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+      
+      document.body.innerHTML = '<h2>Done! "profile_photo.png" has been downloaded. Please move it to your <b>public/</b> folder.</h2>';
+    };
+    img.onerror = function() {
+      document.body.innerHTML = '<h2>Error: Could not load public/profile_photo.jpg</h2>';
+    };
+  </script>
+</body>
+</html>

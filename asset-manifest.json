@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.409561d3.css",
-    "main.js": "/static/js/main.1df2f0cc.js",
-    "static/media/profile_photo.png": "/static/media/profile_photo.29f2c623ea0ffef2145d.png",
+    "main.css": "/static/css/main.d1bb1235.css",
+    "main.js": "/static/js/main.db8bedd5.js",
     "static/media/stanfordLogo.png": "/static/media/stanfordLogo.5a8e3a0a00949c93a9b8.png",
+    "static/media/profile_photo.jpg": "/static/media/profile_photo.25d2cd61672dc86fa2a2.jpg",
     "static/media/harvardLogo.png": "/static/media/harvardLogo.542dab89bfb35b7f5c0d.png",
-    "static/media/quoraLogo.png": "/static/media/quoraLogo.85eb29f4d52320c8ed99.png",
+    "static/media/intellicusLogo.png": "/static/media/intellicusLogo.236be44618166aae832b.png",
+    "static/media/nutanixLogo.jpg": "/static/media/nutanixLogo.15baeae7e3df7193993c.jpg",
     "static/media/googleAssistantLogo.webp": "/static/media/googleAssistantLogo.f720c71652579588524a.webp",
-    "static/media/airbnbLogo.png": "/static/media/airbnbLogo.e8497507db673acd3991.png",
-    "static/media/facebookLogo.png": "/static/media/facebookLogo.f46d68b24e9b4f73ee8b.png",
+    "static/media/thoughtworks_logo.jpg": "/static/media/thoughtworks_logo.886de16e92dd55f44827.jpg",
     "static/media/codeInLogo.webp": "/static/media/codeInLogo.e41a71d512efeda2a55c.webp",
     "static/media/pwaLogo.webp": "/static/media/pwaLogo.8bf2293da0ca66249e37.webp",
     "static/media/saayaHealthLogo.webp": "/static/media/saayaHealthLogo.60b27d1f184fadfce43a.webp",
     "static/media/nextuLogo.webp": "/static/media/nextuLogo.e033dbfa4c58c0a906aa.webp",
     "index.html": "/index.html",
-    "main.409561d3.css.map": "/static/css/main.409561d3.css.map",
-    "main.1df2f0cc.js.map": "/static/js/main.1df2f0cc.js.map"
+    "main.d1bb1235.css.map": "/static/css/main.d1bb1235.css.map",
+    "main.db8bedd5.js.map": "/static/js/main.db8bedd5.js.map"
   },
   "entrypoints": [
-    "static/css/main.409561d3.css",
-    "static/js/main.1df2f0cc.js"
+    "static/css/main.d1bb1235.css",
+    "static/js/main.db8bedd5.js"
   ]
 }
