@@ -1,11 +1,11 @@
-import React, { useState, useEffect, useContext } from "react";
-import { Fade } from "react-reveal";
+import React, {useState, useEffect, useContext} from "react";
+import {Fade} from "react-reveal";
 import "./Reading.scss";
 import StyleContext from "../../contexts/StyleContext";
-import { readingSection } from "../../portfolio";
+import {readingSection} from "../../portfolio";
 
 export default function Reading() {
-  const { isDark } = useContext(StyleContext);
+  const {isDark} = useContext(StyleContext);
   const [readingData, setReadingData] = useState(null);
 
   useEffect(() => {
@@ -72,7 +72,7 @@ export default function Reading() {
           {/* Books Section */}
           <div className="reading-subset">
             <h2 className="subset-title">
-              <i className="fas fa-book" style={{ marginRight: "10px" }}></i>
+              <i className="fas fa-book" style={{marginRight: "10px"}}></i>
               Books
             </h2>
             <div className="reading-list scrollable-list">
@@ -121,7 +121,9 @@ export default function Reading() {
                   {/* Right: Status and Actions */}
                   <div className="tile-actions">
                     <span
-                      className={`status-badge ${book.status.toLowerCase().replace(/\s+/g, "-")}`}
+                      className={`status-badge ${book.status
+                        .toLowerCase()
+                        .replace(/\s+/g, "-")}`}
                     >
                       {book.status}
                     </span>
@@ -144,7 +146,7 @@ export default function Reading() {
           {/* Articles & Papers Section */}
           <div className="reading-subset">
             <h2 className="subset-title">
-              <i className="fas fa-file-alt" style={{ marginRight: "10px" }}></i>
+              <i className="fas fa-file-alt" style={{marginRight: "10px"}}></i>
               Articles &amp; Papers
             </h2>
             <div className="reading-list scrollable-list">
@@ -177,7 +179,9 @@ export default function Reading() {
                   {/* Right: Status and Actions */}
                   <div className="tile-actions">
                     <span
-                      className={`status-badge ${paper.status.toLowerCase().replace(/\s+/g, "-")}`}
+                      className={`status-badge ${paper.status
+                        .toLowerCase()
+                        .replace(/\s+/g, "-")}`}
                     >
                       {paper.status}
                     </span>

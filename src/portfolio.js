@@ -315,7 +315,7 @@ const workExperiences = {
           name: "MARS For Logs",
           desc: "A new concept product to check prodoct market fit for providing Log Analysis capabilities.",
           descBullets: [
-            "I Designed and implemented initial version of \"MARS for logs\" ensuring scalability, robustness & high performance which enabled faster time to market.",
+            'I Designed and implemented initial version of "MARS for logs" ensuring scalability, robustness & high performance which enabled faster time to market.',
             "Enabled faster time to market by doing POCs around parsing, analysing and storing different types of log messages.",
             "This project has further evolved into Bolt Analytics(https://boltanalytics.com)"
           ]
@@ -445,7 +445,7 @@ const achievementSection = {
       image: require("./assets/images/pwaLogo.webp"),
       imageAlt: "PWA Logo",
       footerLink: [
-        { name: "Certification", url: "" },
+        {name: "Certification", url: ""},
         {
           name: "Final Project",
           url: "https://pakistan-olx-1.firebaseapp.com/"

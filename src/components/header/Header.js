@@ -1,13 +1,13 @@
-import React, { useContext } from "react";
+import React, {useContext} from "react";
 import Headroom from "react-headroom";
-import { NavLink } from "react-router-dom";
+import {NavLink} from "react-router-dom";
 import "./Header.scss";
 import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
 import StyleContext from "../../contexts/StyleContext";
 import profilePhoto from "../../assets/images/profile_photo.jpg";
 
 function Header() {
-  const { isDark } = useContext(StyleContext);
+  const {isDark} = useContext(StyleContext);
 
   const closeMenu = () => {
     const menuBtn = document.getElementById("menu-btn");

@@ -77,32 +77,43 @@ export default function WorkExperience() {
                       <span className="role-dates">{exp.date}</span>
                     </div>
 
-                    {exp.projects && exp.projects.map((project, idx) => (
-                      <div key={idx} style={{ marginTop: idx > 0 ? "1.5rem" : "0.5rem" }}>
-                        <p
-                          className={
-                            isDark ? "role-summary dark-mode-text" : "role-summary"
-                          }
-                          style={{ marginBottom: "0.5rem" }}
+                    {exp.projects &&
+                      exp.projects.map((project, idx) => (
+                        <div
+                          key={idx}
+                          style={{marginTop: idx > 0 ? "1.5rem" : "0.5rem"}}
                         >
-                          <strong style={{ fontWeight: "bold" }}>{project.name}: </strong>
-                          {project.desc}
-                        </p>
+                          <p
+                            className={
+                              isDark
+                                ? "role-summary dark-mode-text"
+                                : "role-summary"
+                            }
+                            style={{marginBottom: "0.5rem"}}
+                          >
+                            <strong style={{fontWeight: "bold"}}>
+                              {project.name}:{" "}
+                            </strong>
+                            {project.desc}
+                          </p>
 
-                        {project.descBullets && project.descBullets.length > 0 && (
-                          <ul className="impact-bullets">
-                            {project.descBullets.map((bullet, bulletIdx) => (
-                              <li
-                                key={bulletIdx}
-                                className={isDark ? "dark-mode-text" : ""}
-                              >
-                                {bullet}
-                              </li>
-                            ))}
-                          </ul>
-                        )}
-                      </div>
-                    ))}
+                          {project.descBullets &&
+                            project.descBullets.length > 0 && (
+                              <ul className="impact-bullets">
+                                {project.descBullets.map(
+                                  (bullet, bulletIdx) => (
+                                    <li
+                                      key={bulletIdx}
+                                      className={isDark ? "dark-mode-text" : ""}
+                                    >
+                                      {bullet}
+                                    </li>
+                                  )
+                                )}
+                              </ul>
+                            )}
+                        </div>
+                      ))}
                   </div>
                 </div>
               );
