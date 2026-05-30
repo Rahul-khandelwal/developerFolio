@@ -163,6 +163,11 @@ export default function YoutubeList() {
       <Fade bottom duration={1000} distance="40px">
         <div className="youtube-container">
           <h1 className="green-heading">YouTube</h1>
+          {youtubeSection.subtitle && (
+            <p className={isDark ? "section-subtitle dark-mode-text" : "section-subtitle"}>
+              {youtubeSection.subtitle}
+            </p>
+          )}
 
           {loading ? (
             <div className="youtube-loading font-mono">

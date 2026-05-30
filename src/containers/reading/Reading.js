@@ -2,6 +2,7 @@ import React, {useState, useEffect, useContext} from "react";
 import {Fade} from "react-reveal";
 import "./Reading.scss";
 import StyleContext from "../../contexts/StyleContext";
+import {readingSection} from "../../portfolio";
 
 export default function Reading() {
   const {isDark} = useContext(StyleContext);
@@ -58,6 +59,11 @@ export default function Reading() {
       <Fade bottom duration={1000} distance="40px">
         <div className="reading-container">
           <h1 className="green-heading">Reading List</h1>
+          {readingSection.subtitle && (
+            <p className={isDark ? "section-subtitle dark-mode-text" : "section-subtitle"}>
+              {readingSection.subtitle}
+            </p>
+          )}
 
           {/* Books Section */}
           <div className="reading-subset">

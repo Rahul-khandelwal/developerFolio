@@ -143,6 +143,7 @@ const educationInfo = {
 
 const techStack = {
   viewSkillBars: true, //Set it to true to show Proficiency Section
+  subtitle: "Technologies that I have worked with to build many diverse and great products.",
   experience: [
     {
       Stack: "Distributed Systems & Microservices",
@@ -172,6 +173,7 @@ const techStack = {
 
 const workExperiences = {
   display: true, //Set it to true to show workExperiences Section
+  subtitle: "My experience working with great companies and solving different challenges to build diverse and great products.",
   experience: [
     {
       role: "Staff Backend Engineer",
@@ -395,8 +397,15 @@ const twitterDetails = {
   display: false // Set true to display this section, defaults to false
 };
 
+const readingSection = {
+  title: "Reading List",
+  subtitle: "This is an archive of Books, Papers and articles that I have read and currently reading. I hope everyone seeing this list find these gems helpful.",
+  display: true
+};
+
 const youtubeSection = {
   display: true,
+  subtitle: "Videos that I have posted on youtube which cover technical deep dives, architectural teardowns, and solving real engineering problems for scalable and robust backend systems.",
   // If no apiKey is provided, it will use rss2json with the channelId
   channelId: "UCRhcnwnGWS671wg3CUvk-8Q",
   apiKey: "", // Optional Google API key
@@ -424,5 +433,6 @@ export {
   twitterDetails,
   isHireable,
   resumeSection,
-  youtubeSection
+  youtubeSection,
+  readingSection
 };

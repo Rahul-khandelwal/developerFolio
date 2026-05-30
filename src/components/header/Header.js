@@ -1,5 +1,6 @@
 import React, {useContext} from "react";
 import Headroom from "react-headroom";
+import {NavLink} from "react-router-dom";
 import "./Header.scss";
 import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
 import StyleContext from "../../contexts/StyleContext";
@@ -7,6 +8,13 @@ import profilePhoto from "../../assets/images/profile_photo.png";
 
 function Header() {
   const {isDark} = useContext(StyleContext);
+
+  const closeMenu = () => {
+    const menuBtn = document.getElementById("menu-btn");
+    if (menuBtn) {
+      menuBtn.checked = false;
+    }
+  };
 
   return (
     <Headroom>
@@ -23,24 +31,24 @@ function Header() {
         </label>
 
         {/* Profile + Name Logo */}
-        <a href="/" className="logo">
+        <NavLink to="/" className="logo" onClick={closeMenu}>
           <img src={profilePhoto} className="header-profile-img" alt="Rahul Khandelwal" />
           <span className="logo-name">Rahul Khandelwal</span>
-        </a>
+        </NavLink>
 
         {/* Navigation Menu */}
         <ul className={isDark ? "dark-menu menu" : "menu"}>
           <li>
-            <a href="#about-me">About Me</a>
+            <NavLink exact to="/" activeClassName="active" onClick={closeMenu}>About Me</NavLink>
           </li>
           <li>
-            <a href="#experience">Experience</a>
+            <NavLink to="/experience" activeClassName="active" onClick={closeMenu}>Experience</NavLink>
           </li>
           <li>
-            <a href="#reading">Reading</a>
+            <NavLink to="/reading" activeClassName="active" onClick={closeMenu}>Reading</NavLink>
           </li>
           <li>
-            <a href="#youtube">YouTube</a>
+            <NavLink to="/youtube" activeClassName="active" onClick={closeMenu}>YouTube</NavLink>
           </li>
         </ul>
 

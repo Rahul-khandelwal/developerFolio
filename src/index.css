@@ -26,3 +26,26 @@ body {
   scroll-behavior: smooth;
 }
 
+.section-subtitle {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #24292e;
+  margin-top: -0.75rem;
+  margin-bottom: 2rem;
+  font-weight: 400;
+  max-width: 800px;
+}
+
+.dark-mode .section-subtitle {
+  color: #c9d1d9;
+}
+
+@media (max-width: 768px) {
+  .section-subtitle {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-top: -0.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+

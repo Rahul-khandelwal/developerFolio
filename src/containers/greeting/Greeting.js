@@ -31,6 +31,11 @@ export default function Greeting() {
           {techStack.viewSkillBars && (
             <div className="expertise-content">
               <h1 className="green-heading">Core Expertise</h1>
+              {techStack.subtitle && (
+                <p className={isDark ? "section-subtitle dark-mode-text" : "section-subtitle"}>
+                  {techStack.subtitle}
+                </p>
+              )}
               <div className="skills-badge-container">
                 {techStack.experience.map((exp, i) => {
                   return (

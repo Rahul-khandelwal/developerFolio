@@ -12,3 +12,8 @@ body {
   color: $textColor;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
+
+.main-content-wrapper {
+  min-height: 70vh;
+  box-sizing: border-box;
+}

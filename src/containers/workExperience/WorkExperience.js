@@ -16,6 +16,11 @@ export default function WorkExperience() {
       <Fade bottom duration={1000} distance="40px">
         <div className="experience-container">
           <h1 className="green-heading">Experience</h1>
+          {workExperiences.subtitle && (
+            <p className={isDark ? "section-subtitle dark-mode-text" : "section-subtitle"}>
+              {workExperiences.subtitle}
+            </p>
+          )}
           
           <div className="timeline">
             {workExperiences.experience.map((exp, i) => {

@@ -249,3 +249,11 @@
     padding-left: 0;
   }
 }
+
+.header .menu li a.active {
+  color: $buttonColor !important;
+  font-weight: 700;
+  border-left: none !important;
+  border-bottom: 2px solid $buttonColor !important;
+  background-color: transparent !important;
+}
